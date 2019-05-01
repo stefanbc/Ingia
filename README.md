@@ -1,9 +1,9 @@
 Ingia
 ==
 
-Open source, minimal Ghost theme.
+A free, open source theme for Ghost.
 
-Ghost theme originally based on [Kakotopia](https://en.wiktionary.org/wiki/kakotopia), used on [my personal website](http://stefancosma.xyz).
+Ghost theme originally based on [Kakotopia](https://en.wiktionary.org/wiki/kakotopia).
 
 Instalation
 --
