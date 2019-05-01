@@ -3,7 +3,7 @@ Ingia
 
 A free, open source theme for Ghost.
 
-Ghost theme originally based on [Kakotopia](https://en.wiktionary.org/wiki/kakotopia).
+Ghost theme originally based on [Kakotopia](https://github.com/ourdarkfuture/kakotopia).
 
 Instalation
 --
