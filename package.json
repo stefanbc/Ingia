@@ -1,40 +1,70 @@
 {
-  "name": "stefan-log",
-  "version": "1.3.0",
+  "name": "ingia",
+  "version": "1.0.0",
   "description": "Ghost blog theme for personal website",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefanbc/stefan-log.git"
+    "url": "git+https://github.com/stefanbc/Ingia.git"
+  },
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal"
+    ]
   },
   "keywords": [
     "ghost",
-    "theme",
+    "ghost-theme",
+    "ghost-blog",
+    "ghost-cms",
+    "ghost-blog-theme",
+    "ghost-themes",
     "minimal",
-    "ghost-theme"
+    "ghost-theme",
+    "theme"
   ],
   "author": {
     "name": "Stefan Cosma",
     "url": "https://stefancosma.xyz",
     "email": "hello@stefancosma.xyz"
   },
+  "contributors": [
+    {
+      "name": "Stefan Cosma",
+      "email": "hello@stefancosma.xyz",
+      "url": "https://stefancosma.xyz"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefanbc/stefan-log/issues"
+    "url": "https://github.com/stefanbc/Ingia/issues"
   },
-  "homepage": "https://github.com/stefanbc/stefan-log#readme",
+  "homepage": "https://github.com/stefanbc/Ingia#readme",
   "scripts": {
-    "dev": "parcel ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
-    "build": "parcel build ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
-    "watch": "parcel watch ./assets/scss/index.scss --no-source-maps -d ./assets/css"
+    "clean": "rimraf ./assets/css && rimraf ./ingia.zip",
+    "mkdir": "mkdir -p ./assets/css",
+    "zip": "zip -r9 ingia.zip . -x *.cache* *.git* *.vscode* *.sass-cache* *node_modules/\\*",
+    "validate": "gscan ./ingia.zip -z",
+    "build-css-dev": "parcel ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
+    "build-css-prod": "parcel build ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
+    "watch": "parcel watch ./assets/scss/*.scss --no-source-maps -d ./assets/css",
+    "dev": "yarn clean && yarn mkdir && yarn build-css-dev",
+    "prod": "yarn clean && yarn mkdir && yarn build-css-prod",
+    "deploy": "yarn prod && yarn zip && yarn validate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.2",
     "normalize.css": "^8.0.1",
     "skeleton.css": "^2.0.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.11.0",
-    "sass": "^1.17.2"
+    "gscan": "^2.5.1",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "sass": "^1.19.0"
   },
   "config": {
     "posts_per_page": 5

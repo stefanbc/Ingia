@@ -4,15 +4,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>{{code}} - {{message}} | {{@blog.title}} - {{@blog.description}}</title>
+    <title>{{code}} - {{message}} | {{@site.title}} - {{@site.description}}</title>
 
     {{> "meta"}}
 
     {{! Google+}}
-    <meta itemprop="image" content="{{@blog.url}}{{asset '/images/logo.png'}}"/>
+    <meta itemprop="image" content="{{@site.url}}{{asset '/images/logo.png'}}"/>
     {{! Twitter}}
-    <meta name="twitter:image:src" content="{{@blog.url}}{{asset '/images/logo.png'}}"/>
+    <meta name="twitter:image:src" content="{{@site.url}}{{asset '/images/logo.png'}}"/>
 
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700">
     <link rel="stylesheet" type="text/css" href="{{asset "css/vendor.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.min.css"}}" />
@@ -37,7 +38,7 @@
                     <section class="error-message">
                       <h1 class="error-code">{{code}}</h1>
                       <h2 class="error-description">{{message}}</h2>
-                      <a class="error-link" href="{{@blog.url}}">Go back →</a>
+                      <a class="error-link" href="{{@site.url}}">Go back →</a>
                     </section>
                   </section>
                 </section>

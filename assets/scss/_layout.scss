@@ -201,16 +201,14 @@ main {
 
     .kg-gallery-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
 
         .kg-gallery-row {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: column;
 
             .kg-gallery-image {
-                flex: 1 1 0%;
                 margin: 5px;
 
                 img {

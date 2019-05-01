@@ -1,20 +1,22 @@
-stefan-log
+Ingia
 ==
 
-[![Code Climate](https://codeclimate.com/github/stefanbc/stefan-log/badges/gpa.svg)](https://codeclimate.com/github/stefanbc/stefan-log)
+Open source, minimal Ghost theme.
 
 Ghost theme originally based on [Kakotopia](https://en.wiktionary.org/wiki/kakotopia), used on [my personal website](http://stefancosma.xyz).
 
-Customization
+Instalation
 --
 
-Make sure you replace the URLs in the `partials/social.hbs` file with your own social media URLs.
+1. Download the theme from GitHub.
+2. Upload the theme as described in the [Ghost Documentation](https://docs.ghost.org/concepts/config/).
+3. Make sure you replace the URLs in the `partials/social.hbs` file with your own social media URLs.
+4. This theme has a custom page named `about`. Checkout the Ghost [docs](https://docs.ghost.org/api/handlebars-themes/context/page/#templates) for more info about custom pages.
+5. Additionally you should replace all the image in the `assets/images` folder. You can use [this useful tool](http://realfavicongenerator.net/).
 
-Additionally you should replace all the image in the `assets/images` folder. You can use [this useful tool](http://realfavicongenerator.net/).
+After you've completed the steps above, you can zip the theme and upload it.
 
-Also, don't forget to modify the `partials/meta.hbs` file, lines 12,15,18,19 with your correct links.
-
-This theme is compatible with Ghost 2.x
+**This theme is compatible with Ghost 2.x.**
 
 Developers
 --
@@ -25,8 +27,11 @@ You can install all the theme dependencies using:
 yarn install
 ```
 
-Available tasks:
+Available script you can run for development and production:
 
-* `yarn dev` - will build the whole theme unminified.
-* `yarn build` - will build the whole theme for production.
-* `yarn watch` - will watch for any file modifications and will build. Will also build on start.
+* `yarn dev` - will build the whole theme for testing.
+* `yarn prod` - will build the whole theme for production.
+* `yarn watch` - will watch for any sass file modifications and will build.
+* `yarn zip` - will zip the theme for production.
+* `yarn validate` - will validate the zip created with the previous command.
+* `yarn deploy` - will build the theme for production, zip and validate.
