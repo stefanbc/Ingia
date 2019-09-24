@@ -1,4 +1,4 @@
-Ingia
+Ingia ![build](https://travis-ci.com/stefanbc/Ingia.svg?branch=master)
 ==
 
 A free, open source theme for Ghost.
