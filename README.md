@@ -1,12 +1,12 @@
-Ingia ![build](https://travis-ci.com/stefanbc/Ingia.svg?branch=master)
-==
+## <p align="center">Ingia</p>
 
-A free, open source theme for Ghost.
+![build](https://travis-ci.com/stefanbc/Ingia.svg?branch=master)
 
-Ghost theme originally based on [Kakotopia](https://github.com/ourdarkfuture/kakotopia).
+![ingia stefancosma xyz_](https://user-images.githubusercontent.com/1278794/133776699-39ca9689-2483-4a37-afb2-1635f6c60818.png)
 
-Instalation
---
+A free, single column theme for [Ghost](https://github.com/TryGhost). Originally based on [Kakotopia](https://github.com/ourdarkfuture/kakotopia).
+
+## Instalation
 
 1. Download the theme from GitHub.
 2. Upload the theme as described in the [Ghost Documentation](https://docs.ghost.org/concepts/config/).
@@ -18,8 +18,7 @@ After you've completed the steps above, you can zip the theme and upload it.
 
 **This theme is compatible with Ghost 2.x.**
 
-Developers
---
+## Developers
 
 You can install all the theme dependencies using:
 
